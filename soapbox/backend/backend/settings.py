@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -126,10 +127,10 @@ USE_TZ = True
 STATIC_URL = "/static/"
 MEDIA_URL = '/images/'
 STATICFILES_DIRS = [
-    BASE_DIR /'static'
+    BASE_DIR / 'static',
 ]
 
-MEDIA_ROOT = 'static/images'
+MEDIA_ROOT = BASE_DIR / 'static/images'
 
 CORS_ALLOW_ALL_ORIGINS = True
 

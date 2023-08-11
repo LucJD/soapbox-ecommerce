@@ -6,6 +6,9 @@ __pycache__
 db.sqlite3
 media
 
+# unused files
+app/
+
 # Backup files # 
 *.bak 
 
