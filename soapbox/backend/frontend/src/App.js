@@ -3,6 +3,7 @@ import {Container} from 'react-bootstrap'
 import Header from "./components/Header";
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen';
+import Login from './screens/Login';
 import ProductScreen from './screens/ProductScreen';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path={"/"} element={<HomeScreen/>} exact/>
             <Route path={"product/:id"} element={<ProductScreen/>}/>
+            <Route path={"login"} element={<Login/>}/>
           </Routes>
           
         </Container>

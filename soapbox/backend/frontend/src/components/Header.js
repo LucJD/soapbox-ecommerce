@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 function Header() {
   return (
         <header>
@@ -31,22 +32,19 @@ function Header() {
             </LinkContainer>       
           </NavDropdown>
         </Nav>
-        <Nav>
-            <LinkContainer to="/orders">
-                <Nav.Item>My Orders</Nav.Item>
-            </LinkContainer>
-            <LinkContainer to="/login">
-             <Nav.Item>
+        <Nav className='px-3'>
+
+            <Nav.Link as={Link} to="/orders">My Orders</Nav.Link>
+             
+             <Nav.Link as={Link} to="/login" className='px-3'>
             <i className='fa-regular fa-user'></i>
-            Login</Nav.Item>
-            </LinkContainer>
+            Login</Nav.Link>
           
-         <LinkContainer to={"/cart"}>
-         <Nav.Item>
+         
+         <Nav.Link as={Link}to={'/cart'} className='px-3'>
             <i className='fa-solid fa-cart-shopping'></i>
             Cart
-          </Nav.Item>
-         </LinkContainer>
+          </Nav.Link>
           
         </Nav>
       </Navbar.Collapse>
