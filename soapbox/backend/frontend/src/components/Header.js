@@ -2,7 +2,21 @@ import React from 'react';
 import { Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
+import { logout } from '../actions/userActions';
+import { useDispatch, useSelector } from 'react-redux';
+
 function Header() {
+
+  const userLogin = useSelector(state => state.userLogin)
+  const{userInfo} = userLogin
+  const dispatch = useDispatch()
+
+
+  const logoutHandler = () => {
+    dispatch(logout())
+  }
+
+
   return (
         <header>
         <Navbar collapseOnSelect expand="lg" className="bg-body-secondary">
@@ -36,10 +50,20 @@ function Header() {
 
             <Nav.Link as={Link} to="/orders">My Orders</Nav.Link>
              
-             <Nav.Link as={Link} to="/login" className='px-3'>
+            {userInfo ? (
+              <NavDropdown title = {userInfo.name} id='username'>
+                <LinkContainer to='/profile'>
+                  <NavDropdown.Item>Profile Blue</NavDropdown.Item>
+                </LinkContainer>
+                <NavDropdown.Item onClick={logoutHandler}> Logout</NavDropdown.Item>
+              </NavDropdown>
+            ) :
+            <Nav.Link as={Link} to="/login" className='px-3'>
             <i className='fa-regular fa-user'></i>
             Login</Nav.Link>
-          
+            }
+
+
          
          <Nav.Link as={Link}to={'/cart'} className='px-3'>
             <i className='fa-solid fa-cart-shopping'></i>

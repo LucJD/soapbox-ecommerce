@@ -1,8 +1,20 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.contrib.auth.base_user import BaseUserManager
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
+    
+# class Account(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE,
+#     primary_key=True,)
+    
+#     email = models.EmailField(blank=True, null=True)
+    
+#     class Meta:
+#         managed = False
+#         db_table = 'account'
+
 
 class Product(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null= True)

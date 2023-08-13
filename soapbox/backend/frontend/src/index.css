@@ -6,3 +6,27 @@ h3{
   padding: 1rem;
 }
 
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 1.4rem;
+  padding: .5rem 0;
+}
+
+.nav-item .dropdown-menu {
+  background: none;
+  border: none;
+  border-radius: 8%;
+}
+
+.nav-item .dropdown-item {
+  background: none;
+  color: black;
+  border-radius: 8%;
+}
+
+.nav-item .dropdown-item:hover {
+  background: #f0ad4e;
+}
