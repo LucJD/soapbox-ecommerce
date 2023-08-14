@@ -6,14 +6,11 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import { Card, ListGroup, Row, Col, Form, Image, Button} from 'react-bootstrap';
 import Messages from '../components/Messages';
-import FormCheckInput from 'react-bootstrap/esm/FormCheckInput';
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { Navigate } from 'react-router-dom';
 
 function CartScreen() {
   
-    // const {productId} = useParams()
     const [searchParams] = useSearchParams();
     const qty = searchParams.get('qty')
     const productId = searchParams.get('productId')
@@ -35,7 +32,8 @@ function CartScreen() {
     }
 
     const checkoutHandler = () => {
-        navigate("/login?redirect=shipping")
+        console.log("on checkouthandler")
+        navigate("/login?redirect=/shipping")
     }
 
     const continueShoppingHandler = () => {
@@ -111,12 +109,13 @@ function CartScreen() {
                         </ListGroup.Item>
                     </ListGroup>
                     <ListGroup.Item>
-                        <Button
-                        type='button'
-                        disabled = {cartItems.length === 0}
-                        className='w-100'
-                        onClick={() => checkoutHandler}
-                        >Proceed to Checkout
+                    <Button
+                            type='button'
+                            className='btn-block'
+                            disabled={cartItems.length === 0}
+                            onClick={checkoutHandler}
+                        >
+                            Proceed To Checkout
                         </Button>
                         <Button
                         variant='light'

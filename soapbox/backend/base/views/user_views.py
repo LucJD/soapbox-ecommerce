@@ -12,7 +12,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth.hashers import make_password
 from rest_framework import status
 
-
+#serializer to get token
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
@@ -23,11 +23,11 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         return data
 
-
+#view to get token
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer
 
-
+#register, all visitors
 @api_view(['POST'])
 def registerUser(request):
     data = request.data
@@ -45,7 +45,7 @@ def registerUser(request):
         message = {'detail': 'User with this email already exists'}
         return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
-
+#update profile, is authenticated
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def updateUserProfile(request):
@@ -64,7 +64,7 @@ def updateUserProfile(request):
 
     return Response(serializer.data)
 
-
+#get profile
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def getUserProfile(request):
@@ -72,7 +72,7 @@ def getUserProfile(request):
     serializer = UserSerializer(user, many=False)
     return Response(serializer.data)
 
-
+#get all users, admin only
 @api_view(['GET'])
 @permission_classes([IsAdminUser])
 def getUsers(request):
@@ -80,7 +80,7 @@ def getUsers(request):
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
 
-
+#get user by id, admin only
 @api_view(['GET'])
 @permission_classes([IsAdminUser])
 def getUserById(request, pk):
@@ -88,7 +88,7 @@ def getUserById(request, pk):
     serializer = UserSerializer(user, many=False)
     return Response(serializer.data)
 
-
+#update profile, authenticated user
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def updateUser(request, pk):
@@ -107,7 +107,7 @@ def updateUser(request, pk):
 
     return Response(serializer.data)
 
-
+#delete user, admin only
 @api_view(['DELETE'])
 @permission_classes([IsAdminUser])
 def deleteUser(request, pk):
