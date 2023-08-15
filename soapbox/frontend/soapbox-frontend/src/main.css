@@ -1,0 +1,30 @@
+:root {
+  --darkPurple: #2b3174;
+  --lightPurple: #cbb7d9;
+  --cream: #f2efdf;
+  --golden: #fdc70c;
+  --textColor: #1c164a;
+}
+
+.bg-body-tertiary {
+  background-color: var(--darkPurple) !important;
+}
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  color: var(--cream);
+  font-size: x-large;
+}
+
+.nav-link:hover {
+  color: var(--golden);
+}
+
+.navbar-toggler-icon {
+  background-image: url(/src/ui/navbar/nav-images/burger_cream.png) !important;
+}
+
+.navbar-toggler-icon :focus,
+.navbar-toggler-icon :focus-visible {
+  box-shadow: none !important;
+}

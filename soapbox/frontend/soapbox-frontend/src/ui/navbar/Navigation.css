@@ -1,0 +1,29 @@
+:root {
+  --darkPurple: #2b3174;
+  --lightPurple: #cbb7d9;
+  --cream: #f2efdf;
+  --golden: #fdc70c;
+  --textColor: #1c164a;
+}
+
+/* .bg-body-tertiary {
+  background-color: #2b3174 !important;
+} */
+
+.navIcons {
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.users {
+  padding-right: 1rem;
+}
+
+.spaces {
+  gap: 3rem;
+}
+
+.logoName {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
