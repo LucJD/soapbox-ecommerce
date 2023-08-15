@@ -19,32 +19,56 @@ function Header() {
 
   return (
         <header>
-        <Navbar collapseOnSelect expand="lg" className="bg-body-secondary">
+        <Navbar collapseOnSelect expand="lg" className="bg-primary">
     <LinkContainer to="/">
         <Navbar.Brand>J&S Soapbox</Navbar.Brand>
     </LinkContainer>
       
-      <Navbar.Toggle className='bg-light text-white mx-4' aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+      <Navbar.Toggle type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation" />
+      <Navbar.Collapse id="navbarColor01">
         <Nav className="me-auto">
           <Nav.Link href="/">Products</Nav.Link>
-          <NavDropdown title="Categories" id="collasible-nav-dropdown">
+          <NavDropdown className={'bg-primary'} title="Categories" id="collasible-nav-dropdown">
             
-            <LinkContainer to={"/products/soaps"}>
-                <NavDropdown.Item>Soaps</NavDropdown.Item>
+            <LinkContainer to={{
+              pathname: '/',
+              search: "?category=soap"
+            }}>
+                <NavDropdown.Item className='bg-primary'>Soaps</NavDropdown.Item>
             </LinkContainer>
-            <LinkContainer to={"products/sugar-scrubs"}>
-                <NavDropdown.Item>Sugar Scrubs</NavDropdown.Item>
+            <LinkContainer to={{
+              pathname: '/',
+              search: '?category=sugarscrubs'
+            }}>
+                <NavDropdown.Item className='bg-primary'>Sugar Scrubs</NavDropdown.Item>
             </LinkContainer>
-            <LinkContainer to="products/beard-oils">
-                <NavDropdown.Item>Beard Oils</NavDropdown.Item>
+            <LinkContainer to={{
+              pathname: '/',
+              search: "?category=beardoils"
+            }}>
+                <NavDropdown.Item className='bg-primary'>Beard Oils</NavDropdown.Item>
             </LinkContainer>
             <NavDropdown.Divider />
 
             <LinkContainer to={"/custom-orders"}>
-                <NavDropdown.Item>Custom Orders/ Bulk Orders</NavDropdown.Item>
+                <NavDropdown.Item className='bg-primary'>Custom Orders/ Bulk Orders</NavDropdown.Item>
             </LinkContainer>       
           </NavDropdown>
+
+          {userInfo && userInfo.isAdmin && (
+            <NavDropdown className='bg-primary' title="Admin" id="collasible-nav-dropdown">
+          <LinkContainer to={"/admin/userlist"}>
+                <NavDropdown.Item className='bg-primary'>Users</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to={"admin/orderlist"}>
+                <NavDropdown.Item className='bg-primary'>Orders</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="admin/productlist">
+                <NavDropdown.Item className='bg-primary'>Products</NavDropdown.Item>
+            </LinkContainer>
+            </NavDropdown>
+          )}
+          
         </Nav>
         <Nav className='px-3'>
 
@@ -53,9 +77,9 @@ function Header() {
             {userInfo ? (
               <NavDropdown title = {userInfo.name} id='username'>
                 <LinkContainer to='/profile'>
-                  <NavDropdown.Item>Profile Blue</NavDropdown.Item>
+                  <NavDropdown.Item className='bg-primary'>Profile</NavDropdown.Item>
                 </LinkContainer>
-                <NavDropdown.Item onClick={logoutHandler}> Logout</NavDropdown.Item>
+                <NavDropdown.Item className='bg-primary' onClick={logoutHandler}> Logout</NavDropdown.Item>
               </NavDropdown>
             ) :
             <Nav.Link as={Link} to="/login" className='px-3'>

@@ -1,3 +1,5 @@
+
+
 import {Container} from 'react-bootstrap'
 
 import Header from "./components/Header";
@@ -12,6 +14,8 @@ import CartScreen from './screens/CartScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import ShippingScreen from './screens/shippingScreen';
+import UserListScreen from './screens/UserListScreen';
+import UserEditScreen from './screens/UserEditScreen';
 
 function App() {
   return (
@@ -20,13 +24,16 @@ function App() {
       <main className='py-3'>
         <Container fluid className='mb-5 px-md-5' >
           <Routes>
-            <Route path={"/"} element={<HomeScreen/>} exact/>
+            <Route path={"/?"} element={<HomeScreen/>} exact/>
             <Route path={"product/:id"} element={<ProductScreen/>}/>
             <Route path={"/login"} element={<Login/>}/>
             <Route path={"/profile"} element={<ProfileScreen/>}/>
             <Route path={"/register"} element={<Register/>}/>
             <Route path={"/cart/?"} element={<CartScreen/>}/>
             
+            <Route path={"/admin/userlist"} element={<UserListScreen/>}/>
+            <Route path={"/admin/user/edit/:id"} element={<UserEditScreen/>}/>
+
             
             <Route path='/shipping' element={<ShippingScreen/>}/>
             <Route path='/placeorder' element={<PlaceOrderScreen/>}/>

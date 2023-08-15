@@ -14,12 +14,12 @@ h2{
   font-size: 1.4rem;
   padding: .5rem 0;
 }
-
 .nav-item .dropdown-menu {
-  background: none;
+  background: #78c2ad;
   border: none;
   border-radius: 8%;
 }
+
 
 .nav-item .dropdown-item {
   background: none;

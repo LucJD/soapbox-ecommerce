@@ -8,6 +8,7 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path('', views.getProducts, name='products'),
+    path('category/<str:category>/', views.getProductsByCategory, name='product-category'),
     path('<str:pk>/', views.getProduct, name='product'),
 
 

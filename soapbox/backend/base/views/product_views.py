@@ -24,3 +24,10 @@ def getProduct(request, pk):
     product = Product.objects.get(_id=pk)
     serializer = ProductSerializer(product, many=False)
     return Response(serializer.data)
+
+#by category
+@api_view(['GET'])
+def getProductsByCategory(request, category):
+    products = Product.objects.all().filter(category=category)
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)

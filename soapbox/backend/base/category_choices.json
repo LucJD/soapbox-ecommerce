@@ -1,0 +1,7 @@
+{
+    "CATEGORY_CHOICES": [
+        {"value": "soap", "display": "Soaps"},
+        {"value": "sugarscrubs", "display": "Sugar Scrubs"},
+        {"value": "beardoils", "display": "Beard Oils"}
+    ]
+}
