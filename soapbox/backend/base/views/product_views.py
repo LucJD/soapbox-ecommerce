@@ -31,3 +31,16 @@ def getProductsByCategory(request, category):
     products = Product.objects.all().filter(category=category)
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)
+
+#upload image
+@api_view(['POST'])
+def uploadImage(request):
+    data = request.data 
+    
+    product_id = data['product_id']
+    product = Product.objects.get(_id=product_id)
+    
+    product.image = request.FILES.get('image')
+    product.save()
+    
+    return Response('Image uploaded')

@@ -8,10 +8,13 @@ import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 import { useEffect, useState } from 'react'
 
 import { listMyOrders } from '../actions/orderActions'
-import { Row, Col, Button} from 'react-bootstrap'
+import { Row, Col, Button, Table} from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import Messages from '../components/Messages'
 import Loader from '../components/Loader'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { LinkContainer } from 'react-router-bootstrap'
 
 
 function ProfileScreen() {
@@ -33,6 +36,9 @@ function ProfileScreen() {
 
     const userUpdateProfile = useSelector(state => state.userUpdateProfile)
     const {success} = userUpdateProfile
+
+    const myOrders = useSelector(state => state.orderListMy)
+    const {loading: loadingOrders, error: errorOrders, orders} = myOrders
 
     // const orderListMy = use
 
@@ -122,6 +128,43 @@ function ProfileScreen() {
         </Col>
         <Col md={9}>
             <h2>My Orders</h2>
+            {loadingOrders ? <Loader/> :
+            errorOrders ? <Messages variant='danger'>{errorOrders}</Messages>
+        :
+        <Table striped responsive className="table-sm">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Paid</th>
+                    <th>Delivered</th>
+                </tr>
+            </thead>
+            <tbody>
+                {orders.map(order => (
+                    <tr key={order._id}>
+                        <td>{order._id}</td>
+                        <td>{order.createdAt.substring(0,10)}</td>
+                        <td>{order.totalPrice}</td>
+                        <td>{order.isPaid ? order.paidAt.substring(0,10) : (
+                            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                        ) }</td>
+                        <td>{order.isDelivered ? order.deliveredAt.substring(0,10) : (
+                            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                        ) }</td>
+                        <td>
+                            <LinkContainer to={`/orders/${order._id}`}>
+                                <Button className="btn w-100">Details</Button>
+                            </LinkContainer>
+                        </td>
+                    </tr>
+
+                ))}
+            </tbody>
+
+        </Table>
+        }
         </Col>
     </Row>
   )

@@ -71,8 +71,6 @@ function Header() {
           
         </Nav>
         <Nav className='px-3'>
-
-            <Nav.Link as={Link} to="/orders">My Orders</Nav.Link>
              
             {userInfo ? (
               <NavDropdown title = {userInfo.name} id='username'>

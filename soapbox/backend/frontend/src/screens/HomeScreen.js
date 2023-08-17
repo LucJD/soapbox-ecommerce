@@ -34,9 +34,9 @@ function HomeScreen() {
       {loading ? <Loader/>
       : error ? <Messages variant= {'danger'} children={error}></Messages>
       :
-      <Row className='h-70'>
+      <Row>
         {products?.map((product) => (
-             <Col  key={product._id} sm={12} md={6} lg={4} xl={3}>
+             <Col  className='p-20 h-100' key={product._id} sm={12} md={6} lg={4} xl={3}>
             <Product product={product}/>
             </Col>
         ))

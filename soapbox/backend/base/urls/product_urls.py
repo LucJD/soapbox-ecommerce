@@ -11,5 +11,6 @@ urlpatterns = [
     path('category/<str:category>/', views.getProductsByCategory, name='product-category'),
     path('<str:pk>/', views.getProduct, name='product'),
 
+    path('upload/', views.uploadImage, name='image-upload'),
 
 ]
