@@ -19,6 +19,8 @@ import OrderListScreen from "./screens/OrderListScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
 import AboutScreen from "./screens/AboutScreen";
+import Contact from "./screens/Contact";
+import ContactFooter from "./components/ContactFooter";
 
 function App() {
   return (
@@ -53,10 +55,12 @@ function App() {
             <Route path="/shipping" element={<ShippingScreen />} />
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
             <Route path="/payment" element={<PaymentScreen />} />
+
+            <Route path='/contact' element={<Contact/>}></Route>
           </Routes>
         </Container>
       </main>
-      <Footer />
+      <ContactFooter />
     </Router>
   );
 }
