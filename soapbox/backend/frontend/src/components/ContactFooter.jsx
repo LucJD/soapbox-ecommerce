@@ -61,7 +61,7 @@ const ContactFooter = () => {
 export const Box = styled.div`
   padding: 60px 40px;
   background: black;
-  position: fixed;
+
   bottom: 0;
   left: 0;
   width: 100%;
