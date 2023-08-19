@@ -44,3 +44,22 @@ def uploadImage(request):
     product.save()
     
     return Response('Image uploaded')
+
+#create product
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def createProduct(request):
+    user = request.user
+    
+    product = Product.objects.create(
+        user = user,
+        name = "Sample Name",
+        price = 0,
+        countInStock = 0,
+        category = "Sample Category",
+        description = ''
+    )
+    
+    serializer = ProductSerializer(product, many=False)
+    return Response(serializer.data)
+
