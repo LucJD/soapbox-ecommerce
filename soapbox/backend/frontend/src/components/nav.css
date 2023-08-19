@@ -4,11 +4,23 @@
   --cream: #f2efdf;
   --golden: #fdc70c;
   --textColor: #1c164a;
+  --tan: #a38c6c;
+  --softPink: #fde3d8;
 }
 
-/* .bg-body-tertiary {
-    background-color: #2b3174 !important;
-  } */
+.bg-body-tertiary {
+  background-color: var(--cream) !important;
+}
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  color: var(--darkPurple);
+  font-size: medium;
+}
+
+.nav-link:hover {
+  color: var(--lightPurple);
+}
 
 .navIcons {
   gap: 1rem;
@@ -20,10 +32,19 @@
 }
 
 .spaces {
-  gap: 3rem;
+  gap: 0.5rem;
 }
 
 .logoName {
   padding-top: 1rem;
   padding-left: 1rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url(/public/nav-images/burger_purple.png) !important;
+}
+
+.navbar-toggler-icon :focus,
+.navbar-toggler-icon :focus-visible {
+  box-shadow: none !important;
 }

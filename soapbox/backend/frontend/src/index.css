@@ -1,32 +1,9 @@
-.rating span{
-  margin: 0.1rem;
-}
-
-h3{
-  padding: 1rem;
-}
-
-h1{
-  font-size: 1.8rem;
-  padding: 1rem 0;
-}
-h2{
-  font-size: 1.4rem;
-  padding: .5rem 0;
-}
-.nav-item .dropdown-menu {
-  background: #78c2ad;
-  border: none;
-  border-radius: 8%;
-}
-
-
-.nav-item .dropdown-item {
-  background: none;
-  color: black;
-  border-radius: 8%;
-}
-
-.nav-item .dropdown-item:hover {
-  background: #f0ad4e;
+:root {
+  --darkPurple: #2b3174;
+  --lightPurple: #cbb7d9;
+  --cream: #f2efdf;
+  --golden: #fdc70c;
+  --textColor: #1c164a;
+  --tan: #dabc94;
+  --softPink: #fde3d8;
 }
