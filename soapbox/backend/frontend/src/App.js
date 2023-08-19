@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { AccordionButton, Container } from "react-bootstrap";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -18,6 +18,7 @@ import OrderScreen from "./screens/OrderScreen";
 import OrderListScreen from "./screens/OrderListScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
+import AboutScreen from "./screens/AboutScreen";
 
 function App() {
   return (
@@ -46,6 +47,8 @@ function App() {
               path={"/orders/:id"}
               element={<OrderScreen></OrderScreen>}
             ></Route>
+
+            <Route path="/about" element={<AboutScreen />}></Route>
 
             <Route path="/shipping" element={<ShippingScreen />} />
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
