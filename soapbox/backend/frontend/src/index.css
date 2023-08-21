@@ -1,9 +1,16 @@
 :root {
   --darkPurple: #2b3174;
-  --lightPurple: #cbb7d9;
+  --lightPurple: #dabacf;
+  --mauve: #bb96bc;
+  --purple: #986dc2;
   --cream: #f2efdf;
+  --cream2: #fff5ce
   --golden: #fdc70c;
   --textColor: #1c164a;
-  --tan: #dabc94;
-  --softPink: #fde3d8;
+}
+
+* {
+  
+  font-family: "Montserrat", sans-serif;
+
 }

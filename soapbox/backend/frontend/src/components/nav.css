@@ -1,11 +1,12 @@
 :root {
   --darkPurple: #2b3174;
-  --lightPurple: #cbb7d9;
+  --lightPurple: #dabacf;
+  --mauve: #bb96bc;
+  --purple: #986dc2;
   --cream: #f2efdf;
+  --cream2: #fff5ce
   --golden: #fdc70c;
   --textColor: #1c164a;
-  --tan: #a38c6c;
-  --softPink: #fde3d8;
 }
 
 .bg-body-tertiary {
@@ -15,11 +16,12 @@
 .nav-link {
   font-family: "Montserrat", sans-serif;
   color: var(--darkPurple);
-  font-size: medium;
+  font-size: x-large;
 }
 
 .nav-link:hover {
   color: var(--lightPurple);
+  text-decoration: underline;
 }
 
 .navIcons {
@@ -27,12 +29,16 @@
   padding-right: 1rem;
 }
 
+.loggedIn {
+  display: inline-flex;
+}
+
 .users {
   padding-right: 1rem;
 }
 
 .spaces {
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .logoName {
@@ -48,3 +54,14 @@
 .navbar-toggler-icon :focus-visible {
   box-shadow: none !important;
 }
+
+.loginUsers {
+  padding-top: 1rem;
+}
+
+.loggedIn:hover {
+  color: var(--lightPurple);
+  text-decoration: underline;
+}
+
+

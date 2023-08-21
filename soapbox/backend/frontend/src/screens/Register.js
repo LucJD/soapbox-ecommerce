@@ -1,110 +1,120 @@
-import React from 'react'
-import { Form, Button, Row, Col} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import FormContainer from '../components/FormContainer'
-import Loader from '../components/Loader'
-import { useState, useEffect } from 'react'
+import React from "react";
+import { Form, Button, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import FormContainer from "../components/FormContainer";
+import Loader from "../components/Loader";
+import { useState, useEffect } from "react";
 
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, useSearchParams, useLocation } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useSearchParams, useLocation } from "react-router-dom";
 
-import { register } from '../actions/userActions'
-import Messages from '../components/Messages'
-
-
+import { register } from "../actions/userActions";
+import Messages from "../components/Messages";
+import "./login.css";
 
 function Register() {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
-    const [name, setName] = useState('');
-    const [message, setMessage] = useState('')
-  
-    const dispatch = useDispatch();
-  
-    const [searchParams] = useSearchParams();
-    const navigate = useNavigate();
-    const location = useLocation();
-  
-    const redirect = location.search ? location.search.split("=")[1] : "/";
-  
-    const userRegister = useSelector(state => state.userRegister)
-    const {error, loading, userInfo} = userRegister
-  
-    useEffect (() => {
-      if(userInfo) {
-        navigate(redirect)
-      }
-    }, [userInfo, redirect, navigate])
-  
-    const submitHandler = (e) => {
-        e.preventDefault();
-      if(password !== confirmPassword){
-        setMessage("Passwords do not match.")
-      }else{
-        dispatch(register(name, email, password))
-      }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const dispatch = useDispatch();
+
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const redirect = location.search ? location.search.split("=")[1] : "/";
+
+  const userRegister = useSelector((state) => state.userRegister);
+  const { error, loading, userInfo } = userRegister;
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate(redirect);
     }
-  
+  }, [userInfo, redirect, navigate]);
 
-
-
-
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      setMessage("Passwords do not match.");
+    } else {
+      dispatch(register(name, email, password));
+    }
+  };
 
   return (
-    <FormContainer>
-          <h1>Register</h1>
-          {message && <Messages variant='danger'>{message}</Messages>}
-        {error && <Messages variant='danger'>{error}</Messages>}
-        {loading && <Loader/>}
-        <Form onSubmit={submitHandler}>
-        <Form.Group controlId='name'>
-                <Form.Label>Name</Form.Label>
-                <Form.Control required
-                  type='text'
-                  placeholder="Enter your name"
-                  value = {name}
-                  onChange = {(e) => setName(e.target.value)}>
-                      
-                </Form.Control>
+    <div className="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
+      <div className="form_container p-5 rounded bg-white">
+        <FormContainer>
+          <h1 className="text-center signIn-color">Register</h1>
+          {message && <Messages variant="danger">{message}</Messages>}
+          {error && <Messages variant="danger">{error}</Messages>}
+          {loading && <Loader />}
+          <Form onSubmit={submitHandler}>
+            <Form.Group controlId="name">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              ></Form.Control>
             </Form.Group>
-            <Form.Group controlId='email'>
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control required
-                  type='email'
-                  placeholder="Enter your email"
-                  value = {email}
-                  onChange = {(e) => setEmail(e.target.value)}>                      
-                </Form.Control>
+            <Form.Group controlId="email">
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control
+                required
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              ></Form.Control>
             </Form.Group>
-            <Form.Group controlId='password'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control required
-                  type='password'
-                  placeholder="Password"
-                  value = {password}
-                  onChange = {(e) => setPassword(e.target.value)}>         
-                </Form.Control>
+            <Form.Group controlId="password">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                required
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              ></Form.Control>
             </Form.Group>
-            <Form.Group controlId='confirmPassword'>
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control required
-                  type='password'
-                  placeholder="Confirm Password"
-                  value = {confirmPassword}
-                  onChange = {(e) => setConfirmPassword(e.target.value)}>         
-                </Form.Control>
+            <Form.Group controlId="confirmPassword">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                required
+                type="password"
+                placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              ></Form.Control>
             </Form.Group>
-            <Button type='submit' variant='primary'>Register</Button>
-        </Form>
-        <Row className='py-3'>
-            <Col>
-            Have an Account? <Link to={redirect ? `/login?redirect=${redirect}` :
-           '/login'}>Sign In</Link>
+            <Col xs="auto" className="d-grid">
+              <Button type="submit" variant="primary">
+                Register
+              </Button>
             </Col>
-        </Row>
-    </FormContainer>
-  )
+          </Form>
+          <Row className="py-3">
+            <Col>
+              Have an Account?{" "}
+              <Link
+                className="text-right register-color"
+                to={redirect ? `/login?redirect=${redirect}` : "/login"}
+              >
+                Sign In
+              </Link>
+            </Col>
+          </Row>
+        </FormContainer>
+      </div>
+    </div>
+  );
 }
 
-export default Register
+export default Register;

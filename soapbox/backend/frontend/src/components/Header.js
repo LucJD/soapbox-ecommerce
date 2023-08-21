@@ -32,13 +32,13 @@ function Header() {
                 src="../nav-images/flower.png"
                 width={80}
                 className="d-inline-block align-top"
-                alt="React Bootstrap logo"
+                alt="Flower logo"
               />
 
               <img
                 className="logoName"
                 src="../nav-images/soapbox_darkpurple.png"
-                height={50}
+                height={60}
               />
             </Navbar.Brand>
           </Link>
@@ -85,7 +85,7 @@ function Header() {
                   </NavDropdown.Item>
 
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/">Shop All</NavDropdown.Item>
+                  <NavDropdown.Item href="/shop">Shop All</NavDropdown.Item>
                 </NavDropdown>
 
                 <Nav.Link href="/about">About</Nav.Link>
@@ -107,14 +107,26 @@ function Header() {
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
-          <div className="navIcons">
-            <Link to="/login" className="users">
-              <img
-                src="../nav-images/login_purple.png"
-                alt="Users"
-                width={44}
-              />
-            </Link>
+          <div className={`navIcons ${userInfo ? "loggedIn" : ""}`}>
+            {userInfo ? (
+              <NavDropdown title={userInfo.name} className="loginUsers">
+                <LinkContainer to="/profile">
+                  <NavDropdown.Item>Profile</NavDropdown.Item>
+                </LinkContainer>
+                <NavDropdown.Item onClick={logoutHandler}>
+                  {" "}
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : (
+              <Link to="/login" className="users">
+                <img
+                  src="../nav-images/login_purple.png"
+                  alt="Users"
+                  width={44}
+                />
+              </Link>
+            )}
             <Link to="/cart" className="cart">
               <img src="../nav-images/cart_purple.png" alt="Cart" width={45} />
             </Link>
