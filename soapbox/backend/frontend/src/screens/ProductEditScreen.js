@@ -94,6 +94,7 @@ function ProductEditScreen() {
         formData.append('image', file)
         formData.append('product_id', id)
 
+        console.log(formData)
         setUploading(true)
 
         try {

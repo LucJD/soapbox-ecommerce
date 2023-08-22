@@ -59,25 +59,25 @@ function Header() {
                   title="Shop"
                   id={`offcanvasNavbarDropdown-expand-${"md"}`}
                 >
-                  <NavDropdown.Item href="shop/?category=soap">
+                  <NavDropdown.Item href="/shop/?category=soap">
                     Bar Soaps
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="shop?category=bathbombs">
+                  <NavDropdown.Item href="/shop?category=bathbombs">
                     Bath Bombs
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="shop?category=beardbalm">
+                  <NavDropdown.Item href="/shop?category=beardbalm">
                     Beard Balms
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="shop/?category=beardoils">
+                  <NavDropdown.Item href="/shop/?category=beardoils">
                     Beard Oils
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="shop/?category=bodybutter">
+                  <NavDropdown.Item href="/shop/?category=bodybutter">
                     Body Butters
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="shop/?category=sugarscrubs">
+                  <NavDropdown.Item href="/shop/?category=sugarscrubs">
                     Sugar Scrubs
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="shop/?category=waxmelts">
+                  <NavDropdown.Item href="/shop/?category=waxmelts">
                     Wax Melts
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/custom-orders">
