@@ -90,7 +90,7 @@ function Header() {
 
                 <Nav.Link href="/about">About</Nav.Link>
 
-                <Nav.Link href="#contact">Contact</Nav.Link>
+                <Nav.Link href="/contact">Contact</Nav.Link>
                 {userInfo && userInfo.isAdmin && (
                   <NavDropdown title="Admin" id="collasible-nav-dropdown">
                     <LinkContainer to={"/admin/userlist"}>
