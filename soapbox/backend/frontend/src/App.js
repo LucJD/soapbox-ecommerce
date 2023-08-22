@@ -17,7 +17,7 @@ import UserEditScreen from "./screens/UserEditScreen";
 import OrderScreen from "./screens/OrderScreen";
 import OrderListScreen from "./screens/OrderListScreen";
 import ProductListScreen from "./screens/ProductListScreen";
-import ProductEditScreen from "./screens/ProductEditScreen";
+import ProductEditScreen from "./screens/ProductEditScreen"
 import AboutScreen from "./screens/AboutScreen";
 import Contact from "./screens/Contact";
 import ContactFooter from "./components/ContactFooter";

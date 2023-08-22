@@ -53,7 +53,7 @@ function ProductListScreen() {
         }
     }
 
-    const createProductHandler = (id) => {
+    const createProductHandler = () => {
         dispatch(createProduct())
     }
 
