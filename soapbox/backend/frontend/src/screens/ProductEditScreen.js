@@ -88,13 +88,11 @@ function ProductEditScreen() {
         const file = e.target.files[0]
         const formData = new FormData()
 
-        console.log("on form data")
-        console.log(formData)
-
+        console.log(file)
         formData.append('image', file)
         formData.append('product_id', id)
 
-        console.log(formData)
+        
         setUploading(true)
 
         try {
@@ -109,6 +107,7 @@ function ProductEditScreen() {
             setImage(data)
             console.log(data)
             setUploading(false)
+
         }catch(error){
             setUploading(false)
         }
