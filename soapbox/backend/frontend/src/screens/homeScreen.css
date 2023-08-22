@@ -1,0 +1,54 @@
+:root {
+    --darkPurple: #2b3174;
+    --lightPurple: #dabacf;
+    --mauve: #bb96bc;
+    --purple: #986dc2;
+    --cream: #f2efdf;
+    --cream2: #fff5ce
+    --golden: #fdc70c;
+    --textColor: #1c164a;
+  }
+
+.font-size {
+  font-size: x-large;
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  padding-top: 10rem;
+  text-align: center;
+  color: var(--darkPurple);
+  font-weight: bolder;
+}
+
+.mission {
+  padding-top: 3rem;
+  text-align: center;
+  color: var(--textColor);
+  font-size: x-large;
+}
+
+.f-and-o-icons {
+    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profiles {
+    padding-top: 3rem;
+}
+
+.title-name {
+    padding-top: 2rem;
+    text-align: center;
+    color: var(--darkPurple);
+    font-weight: bolder;
+}
+
+.profile {
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--textColor);
+    font-size: x-large;
+}

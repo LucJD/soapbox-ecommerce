@@ -1,0 +1,68 @@
+:root {
+    --darkPurple: #2b3174;
+    --lightPurple: #dabacf;
+    --mauve: #bb96bc;
+    --purple: #986dc2;
+    --cream: #f2efdf;
+    --cream2: #fff5ce
+    --golden: #fdc70c;
+    --textColor: #1c164a;
+  }
+
+
+.form_container {
+    width: 30%;
+}
+
+.background-image {
+  background-image: url(/src/js-images/soap-background.jpg) !important;
+}
+
+
+
+.btn{
+    background-color: var(--purple);
+}
+
+.btn:hover{
+    background-color: var(--mauve);
+}
+
+.py-3{
+    color: var(--textColor);
+}
+
+.register-color{
+    color: var(--purple) !important;
+}
+
+.register-color:hover{
+    color: var(--mauve);
+}
+
+
+.bg-primary{
+    /* background-image: url(/src/js-images/soap-background.jpg) !important; */
+    background-color: var(--cream)!important;
+    color: var(--darkPurple);
+}
+
+.d-grid{
+    padding-top: 1rem;
+}
+
+.signIn-color{
+    color: var(--textColor);
+}
+
+@media screen and (max-width: 1000px) {
+    .form_container{
+        width: 45%;
+    }  
+}
+
+@media screen and (max-width: 700px) {
+    .form_container{
+        width: 65%;
+    }  
+}

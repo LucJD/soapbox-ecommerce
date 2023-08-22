@@ -1,4 +1,5 @@
-import { AccordionButton, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { AccordionButton } from "react-bootstrap";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -19,6 +20,7 @@ import OrderListScreen from "./screens/OrderListScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen"
 import AboutScreen from "./screens/AboutScreen";
+import ShopScreen from "./screens/ShopScreen";
 import Contact from "./screens/Contact";
 import ContactFooter from "./components/ContactFooter";
 
@@ -30,7 +32,11 @@ function App() {
         <Container fluid className="mb-5 px-md-5">
           <Routes>
             <Route path={"/?"} element={<HomeScreen />} exact />
+            <Route path={"/shop"} element={<ShopScreen />} exact />
             <Route path={"product/:id"} element={<ProductScreen />} />
+            <Route path={"product/:id"} element={<ProductScreen />} />
+
+
             <Route path={"/login"} element={<Login />} />
             <Route path={"/profile"} element={<ProfileScreen />} />
             <Route path={"/register"} element={<Register />} />

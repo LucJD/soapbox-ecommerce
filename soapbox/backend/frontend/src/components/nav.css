@@ -1,18 +1,36 @@
 :root {
   --darkPurple: #2b3174;
-  --lightPurple: #cbb7d9;
+  --lightPurple: #dabacf;
+  --mauve: #bb96bc;
+  --purple: #986dc2;
   --cream: #f2efdf;
+  --cream2: #fff5ce
   --golden: #fdc70c;
   --textColor: #1c164a;
 }
 
-/* .bg-body-tertiary {
-    background-color: #2b3174 !important;
-  } */
+.bg-body-tertiary {
+  background-color: var(--cream) !important;
+}
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  color: var(--darkPurple);
+  font-size: x-large;
+}
+
+.nav-link:hover {
+  color: var(--lightPurple);
+  text-decoration: underline;
+}
 
 .navIcons {
   gap: 1rem;
   padding-right: 1rem;
+}
+
+.loggedIn {
+  display: inline-flex;
 }
 
 .users {
@@ -20,10 +38,30 @@
 }
 
 .spaces {
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .logoName {
   padding-top: 1rem;
   padding-left: 1rem;
 }
+
+.navbar-toggler-icon {
+  background-image: url(/public/nav-images/burger_purple.png) !important;
+}
+
+.navbar-toggler-icon :focus,
+.navbar-toggler-icon :focus-visible {
+  box-shadow: none !important;
+}
+
+.loginUsers {
+  padding-top: 1rem;
+}
+
+.loggedIn:hover {
+  color: var(--lightPurple);
+  text-decoration: underline;
+}
+
+
