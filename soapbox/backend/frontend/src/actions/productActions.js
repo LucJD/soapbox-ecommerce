@@ -125,6 +125,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
 
         dispatch({
             type: PRODUCT_DELETE_SUCCESS,
+            
         })
 
 
