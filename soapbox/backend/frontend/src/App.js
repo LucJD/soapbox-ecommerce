@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import { Container } from "react-bootstrap";
-=======
-import { AccordionButton, Container } from "react-bootstrap";
+import { AccordionButton } from "react-bootstrap";
 
->>>>>>> 7691c488c50ed637ee2d72b681a6418b5a1897fb
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeScreen from "./screens/HomeScreen";
@@ -23,12 +20,9 @@ import OrderListScreen from "./screens/OrderListScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
 import AboutScreen from "./screens/AboutScreen";
-<<<<<<< HEAD
 import ShopScreen from "./screens/ShopScreen";
-=======
 import Contact from "./screens/Contact";
 import ContactFooter from "./components/ContactFooter";
->>>>>>> 7691c488c50ed637ee2d72b681a6418b5a1897fb
 
 function App() {
   return (
@@ -40,6 +34,9 @@ function App() {
             <Route path={"/?"} element={<HomeScreen />} exact />
             <Route path={"/shop"} element={<ShopScreen />} exact />
             <Route path={"product/:id"} element={<ProductScreen />} />
+            <Route path={"product/:id"} element={<ProductScreen />} />
+
+
             <Route path={"/login"} element={<Login />} />
             <Route path={"/profile"} element={<ProfileScreen />} />
             <Route path={"/register"} element={<Register />} />

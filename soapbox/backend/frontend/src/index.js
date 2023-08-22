@@ -1,15 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import "./bootstrap.min.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import store from "./store";
-import { Provider } from "react-redux";
 
-<<<<<<< HEAD
-const root = ReactDOM.createRoot(document.getElementById("root"));
-=======
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -28,11 +18,11 @@ const stripePromise = loadStripe('sk_test_51NehWPJEf7VDPp6AtCb0LKiTWOUQw8TCq352t
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
->>>>>>> 7691c488c50ed637ee2d72b681a6418b5a1897fb
 root.render(
   <Elements stripe = {stripePromise}>
     <Provider store={store}>
     <App />
+
   </Provider>
   </Elements>
   
