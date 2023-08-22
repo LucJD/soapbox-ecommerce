@@ -44,3 +44,49 @@ def uploadImage(request):
     product.save()
     
     return Response('Image uploaded')
+
+#create product
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def createProduct(request):
+    user = request.user
+    
+    product = Product.objects.create(
+        user = user,
+        name = "Sample Name",
+        price = 0,
+        countInStock = 0,
+        category = "Sample Category",
+        description = ''
+    )
+    
+    serializer = ProductSerializer(product, many=False)
+    return Response(serializer.data)
+
+#edit product
+@api_view(['PUT'])
+@permission_classes([IsAdminUser])
+def updateProduct(request, pk):
+    data = request.data
+    product = Product.objects.get(_id=pk)
+
+    product.name = data['name']
+    product.price = data['price']
+    product.countInStock = data['countInStock']
+    product.category = data['category']
+    product.description = data['description']
+
+    product.save()
+
+    serializer = ProductSerializer(product, many=False)
+    return Response(serializer.data)
+
+#delete
+@api_view(['DELETE'])
+@permission_classes([IsAdminUser])
+def deleteProduct(request, pk):
+    product = Product.objects.get(_id=pk)
+    product.delete()
+    return Response('Producted Deleted')
+
+
