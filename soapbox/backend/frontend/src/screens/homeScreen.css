@@ -52,3 +52,12 @@
     color: var(--textColor);
     font-size: x-large;
 }
+
+.bestseller {
+    padding-top: 3rem;
+}
+
+.item-title {
+    padding-top: 1rem;
+    color: var(--darkPurple);
+}
