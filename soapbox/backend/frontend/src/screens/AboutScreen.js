@@ -1,20 +1,24 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import "./about.css";
 
 function About() {
   return (
     <Container>
-      <h1 className="title">About us</h1>
+      <h1 className="about-title">About us</h1>
       <Row>
-        <Col xs={12} lg={6}>
-          <img
-            className="about-pic"
-            src={require("../js-images/sarah.jpg")}
-            alt="Sarah"
-          />
-          <h2>Sarah</h2>
-          <p>
+        <Col xs={12} lg={12} className="cent">
+          <div className="pic-centering">
+            <img
+              className="about-pic"
+              src={require("../js-images/sarah.jpg")}
+              alt="Sarah"
+              width={400}
+            />
+          </div>
+          <h2 className="text-center about-title">Sarah</h2>
+          <p className="about-text">
             {`Welcome to my about me page! I'm thrilled to share a glimpse into my
             life's journey and passion for education and crafting handmade soap.
             As a wife and mom to eight wonderful children, my life is a joyful
@@ -43,14 +47,17 @@ function About() {
             education.`}
           </p>
         </Col>
-        <Col xs={12} lg={6}>
-          <img
-            className="about-pic"
-            src={require("../js-images/jojo.jpg")}
-            alt="Jo jo"
-          />
-          <h2>Jo Jo</h2>
-          <p>
+        <Col xs={12} lg={12}>
+          <div className="pic-centering">
+            <img
+              className="about-pic"
+              src={require("../js-images/jojo.jpg")}
+              alt="Jo jo"
+              width={400}
+            />
+          </div>
+          <h2 className="about-title">Jo Jo</h2>
+          <p className="about-text">
             {`With a rich background spanning 17 years in the retail industry, I
             bring a wealth of experience and a keen understanding of customer
             needs to my newest venture. Motivated by personal experiences, my
