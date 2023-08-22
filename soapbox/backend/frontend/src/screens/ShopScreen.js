@@ -31,6 +31,8 @@ function ShopScreen() {
         <Messages variant={"danger"} children={error}></Messages>
       ) : (
         <Row>
+          {products?.length === 0 ? 
+          <p>No products of that category available right now. Why not <a href="/shop">check out the rest of the shop?</a></p> : <div></div>}
           {products?.map((product) => (
             <Col
               className="p-20 h-100"
