@@ -1,32 +1,16 @@
-.rating span{
-  margin: 0.1rem;
+:root {
+  --darkPurple: #2b3174;
+  --lightPurple: #dabacf;
+  --mauve: #bb96bc;
+  --purple: #986dc2;
+  --cream: #f2efdf;
+  --cream2: #fff5ce
+  --golden: #fdc70c;
+  --textColor: #1c164a;
 }
 
-h3{
-  padding: 1rem;
-}
+* {
+  
+  font-family: "Montserrat", sans-serif;
 
-h1{
-  font-size: 1.8rem;
-  padding: 1rem 0;
-}
-h2{
-  font-size: 1.4rem;
-  padding: .5rem 0;
-}
-.nav-item .dropdown-menu {
-  background: #78c2ad;
-  border: none;
-  border-radius: 8%;
-}
-
-
-.nav-item .dropdown-item {
-  background: none;
-  color: black;
-  border-radius: 8%;
-}
-
-.nav-item .dropdown-item:hover {
-  background: #f0ad4e;
 }

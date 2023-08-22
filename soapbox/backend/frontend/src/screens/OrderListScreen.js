@@ -50,11 +50,11 @@ function OrderListScreen() {
                     <tr key={order._id}>
                         <td>{order._id}</td>
                         <td>{order.user && order.user.name}</td>
-                        <td>{order.createdAt.substring(0, 10)}</td>
+                        <td>{ order.createdAt}</td>
                         <td>{order.totalPrice}</td>
-                        <td>{order.isPaid ? order.paidAt.subString(0,10) :
+                        <td>{order.isPaid ? order.paidAt :
                         <i className='fas fa-times'/>}</td>
-                        <td>{order.isDelivered ? order.deliveredAt.subString(0,10) :
+                        <td>{order.isDelivered ? order.deliveredAt :
                         <i className='fas fa-times'/>}</td>
                         
                         <td>

@@ -9,13 +9,17 @@ import os
 
 class Product(models.Model):
     
-    CATEGORY_CHOICES = [("soap", "Soaps"),
+    CATEGORY_CHOICES = [("soap", "Bar Soaps"),
+                        ("bathbombs","Bath Bombs"),
+                        ("beardbalms","Beard Balms"),
                          ("beardoils", "Beard Oils"),
-                         ("sugarscrubs", "Sugar Scrubs")]
+                         ("bodybutters","Body Butters"),
+                         ("sugarscrubs", "Sugar Scrubs"),
+                         ("waxmelts","Wax Melts")]
     
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null= True)
     name = models.CharField(max_length=200, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, default='/placeholder.png')
     category = models.CharField(max_length=200, null=True, blank=True, choices=CATEGORY_CHOICES)
     description = models.TextField(null=True, blank=True)
     rating = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)

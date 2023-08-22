@@ -10,6 +10,8 @@ import Messages from '../components/Messages'
 import { Table, Col, Row, Button } from 'react-bootstrap'
 import { deleteProduct } from '../actions/productActions'
 import { LinkContainer } from 'react-router-bootstrap'
+
+
 function ProductListScreen() {
     
     const dispatch = useDispatch()
@@ -51,7 +53,7 @@ function ProductListScreen() {
         }
     }
 
-    const createProductHandler = (id) => {
+    const createProductHandler = () => {
         dispatch(createProduct())
     }
 
@@ -92,12 +94,12 @@ function ProductListScreen() {
                 </thead>
 
                 <tbody>
-                    { products.map(product => (
+                    { products.map(product => ( 
                         <tr key={product._id}>
-                            <td>product._id</td>
-                            <td>product.name</td>
-                            <td>product.price</td>
-                            <td>product.category</td>
+                            <td>{product._id}</td>
+                            <td>{product.name}</td>
+                            <td>${product.price}</td>
+                            <td>{product.category}</td>
                             <td>
                             <LinkContainer to={`/admin/product/${product._id}/edit`}>
                                 <Button variant='light' className='btn-sm'>
