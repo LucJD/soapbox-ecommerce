@@ -1,0 +1,33 @@
+:root {
+    --darkPurple: #2b3174;
+    --lightPurple: #dabacf;
+    --mauve: #bb96bc;
+    --purple: #986dc2;
+    --cream: #f2efdf;
+    --cream2: #fff5ce
+    --golden: #fdc70c;
+    --textColor: #1c164a;
+  }
+
+
+.about-title{
+    padding-top: 4rem;
+    color: var(--darkPurple);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.about-pic{
+    padding-top: 3rem;
+}
+
+.pic-centering {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text{
+    text-align: center;
+    font-size: larger;
+}
