@@ -53,7 +53,7 @@ atlassian-ide-plugin.xml
 *$py.class 
 
 # Distribution / packaging 
-.Python build/ 
+
 develop-eggs/ 
 dist/ 
 downloads/ 
@@ -140,5 +140,3 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
-#vite directory doesn't work
-soapbox/frontend/

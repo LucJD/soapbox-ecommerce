@@ -16,7 +16,7 @@ const ContactFooter = () => {
             </Column>
             <Column>
               <Heading>Services</Heading>
-              <FooterLink href="#">Bulk Order</FooterLink>
+              <FooterLink href="/#/contact">Bulk Order</FooterLink>
               
             </Column>
             <Column>

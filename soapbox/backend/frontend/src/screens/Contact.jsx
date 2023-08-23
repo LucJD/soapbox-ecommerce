@@ -37,6 +37,7 @@ const Contact = () => {
            {<img alt="logo" src={Logo}></img>} 
         </div>
         <div class = "column">
+          
           <form ref={form} onSubmit={sendEmail}>
             <label>Name</label>
             <input type="text" name="user_name" />
@@ -48,6 +49,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      
     </StyledContactForm>
   ]
 };

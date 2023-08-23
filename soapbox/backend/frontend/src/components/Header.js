@@ -29,7 +29,7 @@ function Header() {
           <Link to="/">
             <Navbar.Brand>
               <img
-                src="../nav-images/flower.png"
+                src={require("../nav-images/flower.png")}
                 width={80}
                 className="d-inline-block align-top"
                 alt="Flower logo"
@@ -37,7 +37,7 @@ function Header() {
 
               <img
                 className="logoName"
-                src="../nav-images/soapbox_darkpurple.png"
+                src={require("../nav-images/soapbox_darkpurple.png")}
                 height={60}
               />
             </Navbar.Brand>
@@ -59,38 +59,38 @@ function Header() {
                   title="Shop"
                   id={`offcanvasNavbarDropdown-expand-${"md"}`}
                 >
-                  <NavDropdown.Item href="/shop/?category=soap">
+                  <NavDropdown.Item href="/#/shop/?category=soap">
                     Bar Soaps
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/shop?category=bathbombs">
+                  <NavDropdown.Item href="/#/shop?category=bathbombs">
                     Bath Bombs
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/shop?category=beardbalm">
+                  <NavDropdown.Item href="/#/shop?category=beardbalms">
                     Beard Balms
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/shop/?category=beardoils">
+                  <NavDropdown.Item href="/#/shop/?category=beardoils">
                     Beard Oils
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/shop/?category=bodybutter">
+                  <NavDropdown.Item href="/#/shop/?category=bodybutters">
                     Body Butters
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/shop/?category=sugarscrubs">
+                  <NavDropdown.Item href="/#/shop/?category=sugarscrubs">
                     Sugar Scrubs
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/shop/?category=waxmelts">
+                  <NavDropdown.Item href="/#/shop/?category=waxmelts">
                     Wax Melts
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/custom-orders">
+                  <NavDropdown.Item href="/#/contact">
                     Custom Orders/ Bulk Orders
                   </NavDropdown.Item>
 
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/shop">Shop All</NavDropdown.Item>
+                  <NavDropdown.Item href="/#/shop">Shop All</NavDropdown.Item>
                 </NavDropdown>
 
-                <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Link href="/#/about">About</Nav.Link>
 
-                <Nav.Link href="/contact">Contact</Nav.Link>
+                <Nav.Link href="/#/contact">Contact</Nav.Link>
                 {userInfo && userInfo.isAdmin && (
                   <NavDropdown title="Admin" id="collasible-nav-dropdown">
                     <LinkContainer to={"/admin/userlist"}>
@@ -121,14 +121,14 @@ function Header() {
             ) : (
               <Link to="/login" className="users">
                 <img
-                  src="../nav-images/login_purple.png"
+                  src={require("../nav-images/login_purple.png")}
                   alt="Users"
                   width={44}
                 />
               </Link>
             )}
             <Link to="/cart" className="cart">
-              <img src="../nav-images/cart_purple.png" alt="Cart" width={45} />
+              <img src={require("../nav-images/cart_purple.png")} alt="Cart" width={45} />
             </Link>
           </div>
         </Container>

@@ -8,7 +8,7 @@ import Login from "./screens/Login";
 import Register from "./screens/Register";
 import ProductScreen from "./screens/ProductScreen";
 import ProfileScreen from "./screens/ProfileScreen";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import CartScreen from "./screens/CartScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import PaymentScreen from "./screens/PaymentScreen";
@@ -24,6 +24,8 @@ import ShopScreen from "./screens/ShopScreen";
 import Contact from "./screens/Contact";
 import ContactFooter from "./components/ContactFooter";
 
+
+
 function App() {
   return (
     <Router>
@@ -31,10 +33,10 @@ function App() {
       <main className="py-3">
         <Container fluid className="mb-5 px-md-5">
           <Routes>
-            <Route path={"/?"} element={<HomeScreen />} exact />
-            <Route path={"/shop"} element={<ShopScreen />} exact />
-            <Route path={"product/:id"} element={<ProductScreen />} />
-            <Route path={"product/:id"} element={<ProductScreen />} />
+            <Route exact path={"/"} element={<HomeScreen />}/>
+            <Route path={"/shop?"} element={<ShopScreen />}/>
+            <Route path={"/product/:id"} element={<ProductScreen />} />
+            <Route path={"/product/:id"} element={<ProductScreen />} />
 
 
             <Route path={"/login"} element={<Login />} />

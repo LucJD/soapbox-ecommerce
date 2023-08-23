@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { updateUserProfile } from '../actions/userActions'
 import { getUserDetails } from '../actions/userActions'
-import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
+import { USER_DETAILS_RESET, USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 
 import { useEffect, useState } from 'react'
 
@@ -28,11 +28,11 @@ function ProfileScreen() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const userDetails = useSelector(state => state.userDetails)
-    const {error, loading, user} = userDetails
-
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
+
+    const userDetails = useSelector(state => state.userDetails)
+    const {error, loading, user} = userDetails
 
     const userUpdateProfile = useSelector(state => state.userUpdateProfile)
     const {success} = userUpdateProfile
@@ -44,10 +44,10 @@ function ProfileScreen() {
 
     useEffect(() => {
         if(!userInfo) {
-            navigate('login')
+            navigate('/login')
         }
         else{
-            if (!user || !user.name || success) {
+            if (!user || !user.name || success || userInfo._id !== user._id) {
                 dispatch({
                     type: USER_UPDATE_PROFILE_RESET
                 })
