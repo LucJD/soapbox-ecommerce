@@ -14,8 +14,6 @@ import Loader from '../components/Loader'
 import Messages from '../components/Messages'
 import { Link } from 'react-router-dom'
 import FormContainer from '../components/FormContainer'
-import Select from 'react-select'
-import { useRef } from 'react'
 
 function ProductEditScreen() {
 
