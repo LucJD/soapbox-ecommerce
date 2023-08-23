@@ -15,6 +15,7 @@ import Messages from '../components/Messages'
 import { Link } from 'react-router-dom'
 import FormContainer from '../components/FormContainer'
 import Select from 'react-select'
+import { useRef } from 'react'
 
 function ProductEditScreen() {
 
@@ -82,6 +83,7 @@ function ProductEditScreen() {
             countInStock,
             description
         }))
+        console.log(category)
     }
 
     const uploadFileHandler = async (e) => {
@@ -91,6 +93,7 @@ function ProductEditScreen() {
         console.log(file)
         formData.append('image', file)
         formData.append('product_id', id)
+
 
         
         setUploading(true)
@@ -195,17 +198,18 @@ function ProductEditScreen() {
                             <Form.Control
                                 as="select"
                                 value={category}
-                                onChange={e => {
-                                console.log("e.target.value", e.target.value);
-                                setCategory(e.target.value);
-                                    }}
+                                onChange={(e) => 
+                                setCategory(e.target.value)
+                                    }
                                 >
+                                <option value="">Choose Category</option>
                                 <option value="soap">Bar Soaps</option>
                                 <option value="beardoils">Beard Oils</option>
                                 <option value="waxmelts">Wax Melts</option>
                                 <option value="bathbombs">Bath Bombs</option>
                                 <option value="bodybutters">Body Butters</option>
                                 <option value="sugarscrubs">Sugar Scrubs</option>
+                                <option value="beardbalms">Beard Balms</option>
                                 </Form.Control>
                                 </Form.Group>
 
