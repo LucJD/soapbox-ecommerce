@@ -3,28 +3,21 @@ import styled from "styled-components";
 const ContactFooter = () => {
     return (
       <Box>
-        <h1 style={{ color: "#e9b63d", 
+        {/* <h1 style={{ color: "black", 
                      textAlign: "center", 
                      marginTop: "-50px" }}>
           J & S SOAPBOX
-        </h1>
+        </h1> */}
         <Container>
           <Row>
             <Column>
-              <Heading>About Us</Heading>
-              <FooterLink href="#">Text</FooterLink>
-              <FooterLink href="#">Text</FooterLink>
-              <FooterLink href="#">Text</FooterLink>
+              <Heading>Location</Heading>
+              <FooterLink target="_blank" href="http://maps.google.com/maps?q=Batesville,+MS+38606">We are located in Batesville, MS</FooterLink>
             </Column>
             <Column>
               <Heading>Services</Heading>
-              <FooterLink href="#">Text</FooterLink>
-              <FooterLink href="#">Text</FooterLink>
-            </Column>
-            <Column>
-              <Heading>Contact Us</Heading>
-              <FooterLink href="#">Text</FooterLink>
-              <FooterLink href="#">Text</FooterLink>
+              <FooterLink href="#">Bulk Order</FooterLink>
+              
             </Column>
             <Column>
               <Heading>Social Media</Heading>
@@ -60,12 +53,13 @@ const ContactFooter = () => {
 // Styles
 export const Box = styled.div`
   padding: 60px 40px;
-  background: black;
+  background: #f2efdf;
 
   bottom: 0;
   left: 0;
   width: 100%;
   height: 25%;
+
 
   
    
@@ -87,7 +81,7 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 60px;
+  margin-left: 70px;
 `;
    
 export const Row = styled.div`
@@ -103,9 +97,10 @@ export const Row = styled.div`
 `;
    
 export const FooterLink = styled.a`
-  color: #fff;
+  color: black;
   margin-bottom: 20px;
   font-size: 18px;
+  font-family: sans-serif;
   text-decoration: none;
    
   &:hover {
@@ -116,7 +111,7 @@ export const FooterLink = styled.a`
    
 export const Heading = styled.p`
   font-size: 24px;
-  color: #e9b63d;
+  color: purple;
   margin-bottom: 40px;
   font-weight: bold;
 }
