@@ -47,7 +47,7 @@ function Login() {
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>

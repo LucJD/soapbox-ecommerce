@@ -1,0 +1,31 @@
+:root {
+    --darkPurple: #2b3174;
+    --lightPurple: #dabacf;
+    --mauve: #bb96bc;
+    --purple: #986dc2;
+    --cream: #f2efdf;
+    --cream2: #fff5ce
+    --golden: #fdc70c;
+    --textColor: #1c164a;
+  }
+
+.btn-light {
+    color: var(--cream) !important;
+  }
+
+.cart-title {
+    color: var(--darkPurple) !important;
+}
+
+.alert-info {
+    background-color: var(--cream); 
+}
+
+.go-back {
+    padding-left: 1rem;
+    color: var(--purple) !important;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+

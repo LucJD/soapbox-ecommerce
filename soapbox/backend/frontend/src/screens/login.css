@@ -21,7 +21,7 @@
 
 
 .btn{
-    background-color: var(--purple);
+    background-color: var(--purple) !important;
 }
 
 .btn:hover{
@@ -52,7 +52,12 @@
 }
 
 .signIn-color{
-    color: var(--textColor);
+    color: var(--darkPurple);
+}
+
+.box-logo {
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -66,3 +71,4 @@
         width: 65%;
     }  
 }
+
