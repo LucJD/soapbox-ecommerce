@@ -39,6 +39,12 @@ function Login() {
     <div className="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
       <div className="form_container p-5 rounded bg-white">
         <FormContainer>
+          {/* <img
+            alt=""
+            className="text-center"
+            src="../nav-images/soapbox_box.png"
+            width={200}
+          /> */}
           <h1 className="text-center signIn-color">Sign In</h1>
           {error && <Messages variant="danger">{error}</Messages>}
           {loading && <Loader />}

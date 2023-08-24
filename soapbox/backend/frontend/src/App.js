@@ -18,7 +18,7 @@ import UserEditScreen from "./screens/UserEditScreen";
 import OrderScreen from "./screens/OrderScreen";
 import OrderListScreen from "./screens/OrderListScreen";
 import ProductListScreen from "./screens/ProductListScreen";
-import ProductEditScreen from "./screens/ProductEditScreen"
+import ProductEditScreen from "./screens/ProductEditScreen";
 import AboutScreen from "./screens/AboutScreen";
 import ShopScreen from "./screens/ShopScreen";
 import Contact from "./screens/Contact";
@@ -35,7 +35,6 @@ function App() {
             <Route path={"/shop"} element={<ShopScreen />} exact />
             <Route path={"product/:id"} element={<ProductScreen />} />
             <Route path={"product/:id"} element={<ProductScreen />} />
-
 
             <Route path={"/login"} element={<Login />} />
             <Route path={"/profile"} element={<ProfileScreen />} />
@@ -62,7 +61,7 @@ function App() {
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
             <Route path="/payment" element={<PaymentScreen />} />
 
-            <Route path='/contact' element={<Contact/>}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
           </Routes>
         </Container>
       </main>

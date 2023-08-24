@@ -1,0 +1,60 @@
+:root {
+  --darkPurple: #2b3174;
+  --lavender: #cbb7d9;
+  --lightPurple: #dabacf;
+  --mauve: #bb96bc;
+  --purple: #986dc2;
+  --cream: #f2efdf;
+  --cream2: #fff5ce;
+  --golden: #fdc70c;
+  --textColor: #1c164a;
+}
+
+.js-footer {
+  background-color: var(--cream);
+}
+
+.copy-bottom {
+  padding-bottom: 3rem;
+}
+
+.first-column {
+  padding-top: 2rem;
+}
+
+.second-column {
+  padding-top: 2rem;
+}
+
+.third-column {
+  padding-top: 2rem;
+}
+
+.footer-titles {
+  font-family: "Montserrat", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.js-footer-lin {
+  font-family: "Montserrat", sans-serif;
+  color: var(--darkPurple);
+  text-decoration: none !important;
+}
+
+.js-footer-lin:hover {
+  color: var(--lavender);
+  transition: 200ms ease-in;
+  text-decoration: none !important;
+}
+
+.footer-texts {
+  color: var(--darkPurple);
+  text-decoration: none !important;
+}
+
+.socials-m-icons {
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}

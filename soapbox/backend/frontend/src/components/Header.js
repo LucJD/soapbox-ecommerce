@@ -31,14 +31,16 @@ function Header() {
               <img
                 src="../nav-images/flower.png"
                 width={80}
-                className="d-inline-block align-top"
+                className="d-inline-block align-top flower-logo"
                 alt="Flower logo"
               />
 
               <img
                 className="logoName"
-                src="../nav-images/soapbox_darkpurple.png"
+                src="../nav-images/soapbox_purple.png"
+                alt="J & S SOAPBOX"
                 height={60}
+                id="nav-js-icon"
               />
             </Navbar.Brand>
           </Link>
@@ -121,6 +123,7 @@ function Header() {
             ) : (
               <Link to="/login" className="users">
                 <img
+                  id="nav-login-icon"
                   src="../nav-images/login_purple.png"
                   alt="Users"
                   width={44}
@@ -128,7 +131,12 @@ function Header() {
               </Link>
             )}
             <Link to="/cart" className="cart">
-              <img src="../nav-images/cart_purple.png" alt="Cart" width={45} />
+              <img
+                id="nav-cart-icon"
+                src="../nav-images/cart_purple.png"
+                alt="Cart"
+                width={45}
+              />
             </Link>
           </div>
         </Container>

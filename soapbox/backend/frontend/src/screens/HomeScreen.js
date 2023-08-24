@@ -53,12 +53,12 @@ function HomeScreen() {
             smelling and safe for sensitive skin products.
           </p>
         </Col>
-        <Col xs={12} lg={6} className="f-and-o-icons">
+        <Col xs={12} lg={4} className="f-and-o-icons">
           <div className="text-with-icons__block text-center">
             <img
               className="family-icon"
               src={require("../js-images/icon_family.png")}
-              alt="Family Icon"
+              alt="Icon"
               width={175}
             />
             <p className="mission">
@@ -67,18 +67,33 @@ function HomeScreen() {
             </p>
           </div>
         </Col>
-        <Col xs={12} lg={6} className="f-and-o-icons">
+        <Col xs={12} lg={4} className="f-and-o-icons">
           <div className="text-with-icons__block text-center">
             <img
               className="organic-icon"
               src={require("../js-images/icon_organic.png")}
-              alt="Organic Icon"
+              alt="Icon"
               width={175}
             />
             <p className="mission">
               We make it our mission to use only the best ingredients. Rest
               assured that you will be purchasing the best products for
               sensitive skin.
+            </p>
+          </div>
+        </Col>
+        <Col xs={12} lg={4} className="f-and-o-icons">
+          <div className="text-with-icons__block text-center">
+            <img
+              className="earth-icon"
+              src={require("../js-images/icon_earth.png")}
+              alt="Icon"
+              width={175}
+            />
+            <p className="mission">
+              We are committed to the enviornment and recycling. We offer
+              discounts if you bring back our glass containers to be
+              reused(restrictions apply).
             </p>
           </div>
         </Col>
@@ -135,6 +150,72 @@ function HomeScreen() {
               At vero eos et accusamus et iusto odio dignissimos ducimus qui
               blanditiis praesentium voluptatum deleniti atque corrupti
             </p>
+          </Col>
+        </Row>
+        <Row className="text-with-icons__block text-center soapmaking">
+          <Col xs={12} lg={6}>
+            <img
+              className="bottom-pics"
+              src={require("../js-images/soapmaking.jpg")}
+              alt="Making Soap photo"
+              width={300}
+            />
+          </Col>
+          <Col xs={12} lg={6}>
+            <h1 className="makingsoap-title">Handmade with Love</h1>
+            <p className="soapmaking-description">
+              {`With a rich background spanning 17 years in the retail industry, I
+            bring a wealth of experience and a keen understanding of customer
+            needs to my newest venture. Motivated by personal experiences, my
+            decision to delve into creating handmade soap stems from the
+            challenges my family's sensitive skin has posed. This journey
+            reflects my dedication to addressing a real-world concern and
+            offering a solution that prioritizes quality and care. My transition
+            from retail to crafting skincare products showcases my adaptability
+            and commitment to providing products that truly resonate with my
+            customers.`}
+            </p>
+          </Col>
+        </Row>
+        <Row className="text-with-icons__block text-center soapmaking">
+          <Col xs={12} lg={6}>
+            <h1 className="makingsoap-title">
+              Follow us for Pop up Shop Locations
+            </h1>
+            <div className="socials">
+              <a href="https://www.facebook.com/jssoapbox">
+                <img
+                  className="socials-icons"
+                  src={require("../js-images/socials-icon-fb.png")}
+                  alt="fb"
+                  width={100}
+                />
+              </a>
+              <a href="https://instagram.com/jssoapbox?igshid=MzRlODBiNWFlZA==">
+                <img
+                  className="socials-icons"
+                  src={require("../js-images/socials-icon-ig.png")}
+                  alt="ig"
+                  width={100}
+                />
+              </a>
+              <a href="https://twitter.com">
+                <img
+                  className="socials-icons"
+                  src={require("../js-images/socials-icon-x.png")}
+                  alt="x"
+                  width={100}
+                />
+              </a>
+            </div>
+          </Col>
+          <Col xs={12} lg={6}>
+            <img
+              className="bottom-pics"
+              src={require("../js-images/pop-up-shop.jpg")}
+              alt="pop up shop"
+              width={300}
+            />
           </Col>
         </Row>
       </Row>

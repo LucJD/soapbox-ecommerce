@@ -1,5 +1,6 @@
 :root {
   --darkPurple: #2b3174;
+  --lavender: #cbb7d9;
   --lightPurple: #dabacf;
   --mauve: #bb96bc;
   --purple: #986dc2;
@@ -9,14 +10,10 @@
   --textColor: #1c164a;
 }
 
-* {
-  font-family: "Montserrat", sans-serif;
+.products-title {
+  color: var(--darkPurple);
 }
 
-main {
-  min-height: 80vh;
-}
-
-.a {
-  text-decoration: none !important;
+.table-text-color {
+  color: var(--darkPurple) !important;
 }

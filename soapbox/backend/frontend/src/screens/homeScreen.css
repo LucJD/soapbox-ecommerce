@@ -24,7 +24,7 @@
 .mission {
   padding-top: 3rem;
   text-align: center;
-  color: var(--textColor);
+  color: var(--darkPurple);
   font-size: x-large;
 }
 
@@ -49,7 +49,7 @@
 .profile {
     padding-top: 1rem;
     text-align: center;
-    color: var(--textColor);
+    color: var(--darkPurple);
     font-size: x-large;
 }
 
@@ -60,4 +60,27 @@
 .item-title {
     padding-top: 1rem;
     color: var(--darkPurple);
+}
+
+.soapmaking{
+  padding-top: 5rem;
+}
+
+.makingsoap-title {
+    color: var(--darkPurple);
+    font-weight: bolder;
+    padding-top: 2rem;
+    
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  gap: 3rem;
+}
+
+.soapmaking-description {
+  font-size: medium;
 }

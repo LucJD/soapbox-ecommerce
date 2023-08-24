@@ -1,10 +1,11 @@
 :root {
   --darkPurple: #2b3174;
+  --lavender: #cbb7d9;
   --lightPurple: #dabacf;
   --mauve: #bb96bc;
   --purple: #986dc2;
   --cream: #f2efdf;
-  --cream2: #fff5ce
+  --cream2: #fff5ce;
   --golden: #fdc70c;
   --textColor: #1c164a;
 }
@@ -16,12 +17,12 @@
 .nav-link {
   font-family: "Montserrat", sans-serif;
   color: var(--darkPurple);
-  font-size: x-large;
+  font-size: large;
 }
 
 .nav-link:hover {
-  color: var(--lightPurple);
-  text-decoration: underline;
+  color: var(--lavender);
+  transition: 200ms ease-in;
 }
 
 .navIcons {
@@ -60,8 +61,129 @@
 }
 
 .loggedIn:hover {
-  color: var(--lightPurple);
-  text-decoration: underline;
+  color: var(--lavender);
 }
 
+.dropdown-menu :hover {
+  color: var(--cream) !important;
+  background-color: var(--purple) !important;
+}
 
+.dropdown-item {
+  color: var(--darkPurple) !important;
+}
+
+.list-group-item {
+  color: var(--darkPurple) !important;
+}
+
+#nav-login-icon:hover {
+  content: url("../nav-images/login_lavender.png");
+  transition: 200ms ease-in;
+}
+
+#nav-cart-icon:hover {
+  content: url("../nav-images/cart_lavender.png");
+  transition: 200ms ease-in;
+}
+
+#nav-js-icon:hover {
+  content: url("../nav-images/soapbox_lavender.png");
+  transition: 200ms ease-in;
+}
+
+.active {
+  background-color: var(--lavender) !important;
+  color: var(--textColor) !important;
+}
+
+@media only screen and (min-width: 600px) {
+  .flower-logo {
+    width: 140px;
+  }
+
+  .logoName {
+    height: 80px;
+  }
+
+  .nav-link {
+    font-size: xx-large;
+  }
+
+  #nav-cart-icon {
+    width: 70px;
+  }
+
+  .footer-titles {
+    font-size: xx-large;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .logoName {
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .logoName {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logoName {
+    height: 35px;
+  }
+
+  .flower-logo {
+    width: 70px;
+  }
+
+  .nav-link {
+    font-size: medium;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logoName {
+    height: 50px;
+  }
+  .socials-icons {
+    width: 65px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .flower-logo {
+    width: 70px;
+  }
+  .logoName {
+    height: 50px;
+  }
+  .socials-icons {
+    width: 65px;
+  }
+  .socials {
+    gap: 1rem;
+  }
+  .bottom-pics {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .logoName {
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .logoName {
+    height: 40px;
+  }
+
+  .flower-logo {
+    width: 50px;
+  }
+}

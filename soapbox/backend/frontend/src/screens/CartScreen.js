@@ -129,7 +129,7 @@ function CartScreen() {
             <ListGroup.Item>
               <Button
                 type="button"
-                className="w-100"
+                className="w-100 mb-1"
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >

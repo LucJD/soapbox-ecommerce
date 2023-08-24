@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
-import Logo from "./images/logo.JPG"
+import Logo from "../nav-images/flower.png";
 
 // npm i @emailjs/browser
 
@@ -22,7 +22,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
-          e.target.reset()
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
@@ -31,25 +31,31 @@ const Contact = () => {
   };
 
   return [
-    <StyledContactForm>
-      <div class = "row">
-        <div class = "column">
-           {<img alt="logo" src={Logo}></img>} 
-        </div>
-        <div class = "column">
-          <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
-            <input type="text" name="user_name" />
-            <label>Email</label>
-            <input type="email" name="user_email" />
-            <label>Message</label>
-            <textarea name="message" />
-            <input type="submit" value="Send" />
-          </form>
-        </div>
+    <div className="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
+      <div className="form_container p-5 rounded bg-white">
+        <StyledContactForm>
+          <div class="row">
+            <h1 className="text-center signIn-color">Email Us</h1>
+            {/* <div class="column">
+          {<img alt="logo" src={Logo}></img>}
+          </div> */}
+            <div class="column">
+              <form ref={form} onSubmit={sendEmail}>
+                <label>Name</label>
+                <input type="text" name="user_name" />
+                <label>Email</label>
+                <input type="email" name="user_email" />
+                <label>Message</label>
+                <textarea name="message" />
+                <input type="submit" value="Send" />
+              </form>
+            </div>
+          </div>
+        </StyledContactForm>
+        ,
       </div>
-    </StyledContactForm>
-  ]
+    </div>,
+  ];
 };
 
 export default Contact;
@@ -60,11 +66,11 @@ const StyledContactForm = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  
+
   .row {
     display: flex;
   }
-  
+
   .column {
     flex: 33.33%;
     padding: 5px;
@@ -72,9 +78,12 @@ const StyledContactForm = styled.div`
     justify-content: center;
   }
 
-  img {
-    width: 70%;
+  .js-logo {
+    justify-content: center;
+  }
 
+  img {
+    width: 200%;
   }
 
   form {
@@ -82,17 +91,17 @@ const StyledContactForm = styled.div`
     align-items: flex-start;
     flex-direction: column;
     width: 80%;
-    font-size: 16pt;
+    font-size: 12pt;
 
     input {
       width: 100%;
       height: 35px;
       padding: 7px;
       outline: none;
-      border-radius: 5px;
+      border-radius: 10px;
       border: 1px solid rgb(220, 220, 220);
       color: black;
-      font-family: 'Hanalei Fill', cursive;
+      font-family: "Montserrat", sans-serif;
 
       &:focus {
         border: 2px solid rgba(0, 206, 158, 1);
@@ -109,7 +118,7 @@ const StyledContactForm = styled.div`
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
-      font-family: 'Hanalei Fill', cursive;
+      font-family: "Montserrat", sans-serif;
 
       &:focus {
         border: 2px solid rgba(0, 206, 158, 1);
@@ -117,18 +126,18 @@ const StyledContactForm = styled.div`
     }
 
     label {
-      margin-top: 1rem;
-      font-family: 'Hanalei Fill', cursive;
+      margin-top: 0.25rem;
+      font-family: "Montserrat", sans-serif;
     }
 
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-      background: purple;
+      background: #986dc2;
       color: white;
       border: none;
-      font-family: 'Hanalei Fill', cursive;
-      font-size: 16pt;
+      font-family: "Montserrat", sans-serif;
+      font-size: 12pt;
     }
   }
 `;
