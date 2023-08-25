@@ -41,8 +41,11 @@ function ProductListScreen() {
 
   useEffect(() => {
     dispatch({ type: PRODUCT_CREATE_RESET });
+    if (!userInfo) {
+      navigate("/login");
+    }
 
-    if (!userInfo.isAdmin) {
+    if (!userInfo?.isAdmin) {
       navigate("/login");
     }
     if (successCreate) {
@@ -115,7 +118,7 @@ function ProductListScreen() {
                   <td className="table-text-color">
                     <LinkContainer to={`/admin/product/${product._id}/edit`}>
                       <Button variant="light" className="btn-sm">
-                        <i className="fas fa-edit spaces"></i>
+                        <i className="fas fa-edit"></i>
                       </Button>
                     </LinkContainer>
                     <Button

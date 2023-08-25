@@ -108,8 +108,8 @@ function HomeScreen() {
             />
             <h3 className="item-title">Mellon Baller Bar Soap</h3>
             <p className="item-description">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti
+              A subtle but sweet scent created to get you in touch with
+              frolicking through the meadows in Montana at the height of spring.
             </p>
           </Col>
           <Col xs={12} lg={3} className="bestseller">
@@ -121,8 +121,9 @@ function HomeScreen() {
             />
             <h3 className="item-title">Mellon Baller Wax Melt</h3>
             <p className="item-description">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti
+              {`It's the same soft refreshing tone but, get this its in a wax
+              melt. That's right you can now get your home or any inside
+              dwelling to smell just like one of our most popular bar soaps.`}
             </p>
           </Col>
           <Col xs={12} lg={3} className="bestseller">
@@ -134,8 +135,11 @@ function HomeScreen() {
             />
             <h3 className="item-title">Rough Cut Wax Melt</h3>
             <p className="item-description">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti
+              {`One of our more popular scents for everyone! However if you are
+              someone trying to attract the attention of the ladies this is the
+              one for you its that scent that you leave on your partner's
+              clothes days after you have left their presence this earthly yet
+              rugged tone is a great gift for all.`}
             </p>
           </Col>
           <Col xs={12} lg={3} className="bestseller">
@@ -147,8 +151,9 @@ function HomeScreen() {
             />
             <h3 className="item-title">Undertow Beard Oil</h3>
             <p className="item-description">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti
+              Put the He in him with this strong smell of manly fumes this oil
+              moisturizes even the sturdiest of beards and gives it the smell
+              that will not allow others to let go.
             </p>
           </Col>
         </Row>
@@ -164,16 +169,7 @@ function HomeScreen() {
           <Col xs={12} lg={6}>
             <h1 className="makingsoap-title">Handmade with Love</h1>
             <p className="soapmaking-description">
-              {`With a rich background spanning 17 years in the retail industry, I
-            bring a wealth of experience and a keen understanding of customer
-            needs to my newest venture. Motivated by personal experiences, my
-            decision to delve into creating handmade soap stems from the
-            challenges my family's sensitive skin has posed. This journey
-            reflects my dedication to addressing a real-world concern and
-            offering a solution that prioritizes quality and care. My transition
-            from retail to crafting skincare products showcases my adaptability
-            and commitment to providing products that truly resonate with my
-            customers.`}
+              {`We started this company as two sisters living everyday lives from California after moving to Mississippi looking for something that we could do that we would love but also wouldn't take us away from our families. Making this choice was scary but ended up being a positive insert to life for us and now we get to share our gift of delightful smell's with the world. We welcome you into our family with open arms and hope that you find just what you're looking for!`}
             </p>
           </Col>
         </Row>

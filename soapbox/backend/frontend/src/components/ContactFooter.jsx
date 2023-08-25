@@ -1,4 +1,5 @@
 import "./footer.css";
+import "../../src/index.css";
 import { Navbar } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -42,32 +43,31 @@ export default function ContactFooter() {
                 <h3 className="footer-titles">Social Media</h3>
               </Row>
               <Row className="socials-m-icons">
-                <Col className="fb-row">
+                <Col className="fb-ig-x">
                   <a href="https://www.facebook.com/jssoapbox">
                     <img
                       src={require("../js-images/socials-icon-fb.png")}
                       alt="fb"
                       width={30}
+                      className="fb-row"
                     />
                   </a>
-                </Col>
-                <Col className="ig-row">
                   <a href="https://instagram.com/jssoapbox?igshid=MzRlODBiNWFlZA==">
                     <img
                       className="socials-icons"
                       src={require("../js-images/socials-icon-ig.png")}
                       alt="ig"
                       width={30}
+                      className="ig-row"
                     />
                   </a>
-                </Col>
-                <Col className="x-row">
                   <a href="https://twitter.com">
                     <img
                       className="socials-icons"
                       src={require("../js-images/socials-icon-x.png")}
                       alt="x"
                       width={30}
+                      className="x-row"
                     />
                   </a>
                 </Col>

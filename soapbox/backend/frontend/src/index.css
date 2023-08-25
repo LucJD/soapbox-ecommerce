@@ -10,11 +10,11 @@
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 main {
-  min-height: 80vh;
+  min-height: 63vh;
 }
 
 .a {

@@ -97,28 +97,6 @@
   color: var(--textColor) !important;
 }
 
-@media only screen and (min-width: 600px) {
-  .flower-logo {
-    width: 140px;
-  }
-
-  .logoName {
-    height: 80px;
-  }
-
-  .nav-link {
-    font-size: xx-large;
-  }
-
-  #nav-cart-icon {
-    width: 70px;
-  }
-
-  .footer-titles {
-    font-size: xx-large;
-  }
-}
-
 @media only screen and (max-width: 912px) {
   .logoName {
     height: 45px;
@@ -186,4 +164,13 @@
   .flower-logo {
     width: 50px;
   }
+}
+
+#offcanvasNavbarLabel-expand-md {
+  content: url(../nav-images/soapbox_purple.png);
+  width: 200px;
+}
+
+.offcanvas-body {
+  background-color: var(--cream);
 }

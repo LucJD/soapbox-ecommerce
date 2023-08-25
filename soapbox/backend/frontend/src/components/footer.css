@@ -58,3 +58,13 @@
   padding-right: 2rem;
   padding-bottom: 2rem;
 }
+
+.a {
+  text-decoration: none !important;
+}
+
+.fb-ig-x {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
