@@ -69,7 +69,12 @@ function UserListScreen() {
                 <td>
                   <LinkContainer to={`/admin/user/edit/${user._id}`}>
                     <Button variant="light" className="btn-sm">
-                      <i className="fas fa-edit"></i>
+                      <img
+                        className="pencil"
+                        src={require("../nav-images/pencil.png")}
+                        alt="edit"
+                        width={20}
+                      />
                     </Button>
                   </LinkContainer>
 
@@ -78,7 +83,12 @@ function UserListScreen() {
                     className="btn-sm"
                     onClick={() => deleteHandler(user._id)}
                   >
-                    <i className="fas fa-trash"></i>
+                    <img
+                      className="trash"
+                      src={require("../nav-images/trash.png")}
+                      alt="delete"
+                      width={20}
+                    />
                   </Button>
                 </td>
               </tr>

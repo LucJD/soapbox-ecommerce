@@ -118,7 +118,12 @@ function ProductListScreen() {
                   <td className="table-text-color">
                     <LinkContainer to={`/admin/product/${product._id}/edit`}>
                       <Button variant="light" className="btn-sm">
-                        <i className="fas fa-edit"></i>
+                        <img
+                          className="pencil"
+                          src={require("../nav-images/pencil.png")}
+                          alt="edit"
+                          width={20}
+                        />
                       </Button>
                     </LinkContainer>
                     <Button
@@ -126,7 +131,12 @@ function ProductListScreen() {
                       className="btn-sm"
                       onClick={() => deleteHandler(product._id)}
                     >
-                      <i className="fas fa-trash"></i>
+                      <img
+                        className="trash"
+                        src={require("../nav-images/trash.png")}
+                        alt="delete"
+                        width={20}
+                      />
                     </Button>
                   </td>
                 </tr>

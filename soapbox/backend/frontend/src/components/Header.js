@@ -29,7 +29,7 @@ function Header() {
           <Link to="/">
             <Navbar.Brand>
               <img
-                src="../nav-images/flower.png"
+                src={require("../nav-images/flower.png")}
                 width={80}
                 className="d-inline-block align-top flower-logo"
                 alt="Flower logo"
@@ -37,7 +37,7 @@ function Header() {
 
               <img
                 className="logoName"
-                src="../nav-images/soapbox_purple.png"
+                src={require("../nav-images/soapbox_purple.png")}
                 alt="J & S SOAPBOX"
                 height={60}
                 id="nav-js-icon"
@@ -124,7 +124,7 @@ function Header() {
               <Link to="/login" className="users">
                 <img
                   id="nav-login-icon"
-                  src="../nav-images/login_purple.png"
+                  src={require("../nav-images/login_purple.png")}
                   alt="Users"
                   width={44}
                 />
@@ -133,7 +133,7 @@ function Header() {
             <Link to="/cart" className="cart">
               <img
                 id="nav-cart-icon"
-                src="../nav-images/cart_purple.png"
+                src={require("../nav-images/cart_purple.png")}
                 alt="Cart"
                 width={45}
               />
